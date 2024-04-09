@@ -165,7 +165,43 @@ main {
     justify-content: space-between;
 }
 
-/* Header on tablet */
+footer {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #0891b2;
+    padding: 25px;
+}
+
+.quote-address-and-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.quote-address-and-contact-info h1,
+.quote-address-and-contact-info div p {
+    color: white;
+}
+
+.quote-address-and-contact-info div p {
+    font-size: 18px;
+}
+
+.second-image {
+    background: url(/images/contact.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 35%;
+}
+
+footer .social-links {
+    align-self: flex-start;
+}
+
+/* tablet */
 @media only screen and (min-width: 600px) and (max-width: 1450px) {
     header {
         padding-top: 50px;
@@ -188,17 +224,16 @@ main {
         grid-template-columns: 1fr 1fr;
     }
 
+    .project {
+        height: 575px;
+    }
+
     .my-work {
         padding-left: 0px;
     }
 }
 
-footer {
-    display: flex;
-    padding: 75px;
-}
-
-/* Header on mobile */
+/* mobile */
 @media only screen and (max-width: 600px) {
     header {
         background-image: linear-gradient(176deg, #0891b2 30%, #FFFFFF calc(30% + 2px));
@@ -242,5 +277,18 @@ footer {
 
     .my-work {
         padding-left: 0px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .second-image {
+        background: url(/images/contact.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        width: 100%;
     }
 }
